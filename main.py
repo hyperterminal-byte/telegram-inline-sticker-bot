@@ -14,7 +14,7 @@ bot = telebot.TeleBot(os.environ['BOT_API_KEY'], parse_mode='MARKDOWN')
 owner_id=os.environ['OWNER_ID']
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "InlineStickerBot,\nyou send stickers here to add them to database, find em through tags inline in any chat instantaneously")
+    bot.reply_to(message, "Hyperterminal's personal sticker helper bot. Intended for personal use, check out https://www.bit.ly/3elg6RY for more.")
 
 
 @bot.message_handler(commands=['addtags'])
@@ -26,11 +26,11 @@ def add_sticker(message):
                 stickerDatabase.sadd(replied_sticker_id,tags)
             bot.reply_to(message,f"Added sticker id to database.")
         except KeyError:
-            bot.reply_to(message,"I dont see any replied sticker...")
+            bot.reply_to(message,"I dont see any replied sticker.")
         except Exception as e:
             bot.reply_to(message,e)
     else:
-        bot.reply_to(message,"You aren't authorized to contribute stickers.")
+        bot.reply_to(message,"You aren't authorized to manage stickers.")
 
 @bot.message_handler(commands=['authorize'])
 def add_sticker(message):
