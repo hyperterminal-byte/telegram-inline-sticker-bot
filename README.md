@@ -6,7 +6,7 @@ A Telegram inline bot to add tags to a sticker to make it easier to find them. C
 
 ## Deployment and setup instructions
 ### Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/JeelPatel231/telegram-inline-sticker-bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/hyperterminal-byte/telegram-inline-sticker-bot)
 1. Create a new bot using @BotFather and enable inline mode by sending `/mybots` > Bot Settings > Inline Mode.
 2. Use the one-click Heroku deploy button above and provide the bot token for the bot you just created, along with the owner id which can be obtained by sending `/id` to @MissRose_bot.
 3. Wait for the bot to get deployed, after it's done turn on the dyno in Heroku. Voila the bot must now be up.
